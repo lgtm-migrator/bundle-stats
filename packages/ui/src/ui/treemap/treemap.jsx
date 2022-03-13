@@ -3,9 +3,9 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 import squarify from './treemap-squarify';
-import css from './treemap.module.css'
+import css from './treemap.module.css';
 
-const getPercentageValue = (value, ref) => `${(value / ref ) * 100}%`;
+const getPercentageValue = (value, ref) => `${(value / ref) * 100}%`;
 
 const DefaultItem = ({ item, ...restProps }) => (
   <div {...restProps}>
@@ -38,7 +38,7 @@ export const Treemap = ({ className, data, Item }) => {
     const height = containerRef?.current?.clientHeight || 210;
 
     const values = data.map(({ value }) => value);
-    const itemCoordinates = squarify(values, width, height, 0, 0);
+    const itemCoordinates = squarify(values, width, height);
 
     const newItems = data.map((item, index) => {
       const coordinates = itemCoordinates[index];

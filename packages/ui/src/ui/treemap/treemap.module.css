@@ -10,7 +10,6 @@
 }
 
 .item {
-  padding: var(--space-xxsmall);
   position: absolute;
   display: flex;
   align-items: center;
