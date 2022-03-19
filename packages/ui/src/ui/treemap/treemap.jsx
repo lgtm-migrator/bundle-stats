@@ -7,6 +7,19 @@ import css from './treemap.module.css';
 
 const getPercentageValue = (value, ref) => `${(value / ref) * 100}%`;
 
+const ItemWrapper = ({ style, children }) => {
+  return (
+    <div className={css.itemWrapper} style={style}>
+      {children}
+    </div>
+  );
+};
+
+ItemWrapper.propTypes = {
+  style: PropTypes.object.isRequired, // eslint-ignore-line react/forbid-prop-types
+  children: PropTypes.node.isRequired,
+};
+
 const DefaultItem = ({ item, ...restProps }) => (
   <div {...restProps}>
     <span className={css.itemLabel}>{item.label || item.id}</span>
@@ -61,7 +74,9 @@ export const Treemap = ({ className, data, Item }) => {
   return (
     <div className={rootClassName} ref={containerRef}>
       {items.map((item) => (
-        <Item className={css.item} style={item.style} item={item} />
+        <ItemWrapper key={item.id} style={item.style}>
+          <Item className={css.item} item={item} />
+        </ItemWrapper>
       ))}
     </div>
   );
