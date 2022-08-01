@@ -12,6 +12,7 @@ export { JobHeader } from './job-header';
 export { JobsHeader } from './jobs-header';
 export { LighthouseTable } from './lighthouse-table';
 export { Metric } from './metric';
+export { MetricDetails } from './metric-details';
 export { MetricsTable } from './metrics-table';
 export { MetricsTableOptions } from './metrics-table-options';
 export { MetricsTableSearch } from './metrics-table-search';

@@ -1,0 +1,26 @@
+.title {
+  color: var(--color-text-ultra-light);
+  font-weight: bold;
+  font-size: var(--size-xsmall);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.value {
+  color: var(--color-heading);
+  font-size: var(--size-xlarge);
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.delta {
+  margin-left: var(--space-xxxsmall);
+  font-size: var(--size-small);
+  font-weight: bold;
+}
+
+.baseline {
+  display: block;
+  color: var(--color-text);
+  font-size: var(--size-small);
+}
