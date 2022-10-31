@@ -1,7 +1,7 @@
 import get from 'lodash/get';
 import template from 'lodash/template';
 
-import { INSIGHT_INFO } from '../../config/insights';
+import { InsightType } from '../../config/insights';
 import { getMetricRunInfo } from '../../utils/metrics';
 import { getMetricType } from '../utils';
 
@@ -25,7 +25,7 @@ export const extractAssetsSizeTotalInsight = (
   return {
     insights: {
       assetsSizeTotal: {
-        type: INSIGHT_INFO,
+        type: InsightType.INFO,
         data: {
           text: INFO_TEMPLATE({ metric: metric.label, displayValue, displayDeltaPercentage }),
           md: INFO_TEMPLATE({
